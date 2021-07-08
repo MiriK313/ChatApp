@@ -1,0 +1,33 @@
+{
+    "name": "chat-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/cli": "^7.14.5",
+        "@babel/core": "^7.14.6",
+        "@babel/node": "^7.14.7",
+        "@babel/preset-env": "^7.14.7",
+        "bootstrap": "^4.6.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "http": "0.0.1-security",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.2.5",
+        "nodemon": "^2.0.7",
+        "path": "^0.12.7",
+        "pg": "^8.6.0",
+        "pg-hstore": "^2.3.4",
+        "react-bootstrap": "^1.6.1",
+        "sequelize": "^6.6.4",
+        "sequelize-cli": "^6.2.0",
+        "socket.io": "^2.4.1"
+    },
+    "scripts": {
+        "start": "nodemon --exec npm run babel-node --  server.js",
+        "babel-node": "babel-node",
+        "dev": "env-cmd -f server/config/config nodemon server.js",
+        "heroku-postbuild": "cd client && npm install && npm run build"
+    }
+}
